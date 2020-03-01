@@ -1,0 +1,44 @@
+
+.drink-category {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color:grey;
+}
+
+.categories-list-wrapper {
+    border-right: 2px solid grey;
+    padding-top: 20px;
+}
+
+.horizontal-line {
+    border-bottom: 2px solid grey;
+    margin-bottom: 15px;
+}
+
+.drink-item {
+    padding-bottom: 20px;
+}
+
+.drink-item-image {
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.drink-item-name {
+    text-align: center;
+    padding-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+

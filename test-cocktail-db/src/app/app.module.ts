@@ -1,26 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+// components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ContentContainerComponent } from './components/content-container/content-container.component';
-import { FilterComponent } from './components/content-container/filter/filter.component';
-import { ContentComponent } from './components/content-container/content/content.component';
+import { ContentComponent } from './components/content/content.component';
+
+// modules
+import { ContentModule } from 'src/app/components/content/content.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContentContainerComponent,
-    FilterComponent,
-    ContentComponent
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    ContentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
