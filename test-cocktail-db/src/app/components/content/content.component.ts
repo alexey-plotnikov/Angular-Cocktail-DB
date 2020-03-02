@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
   public checkedCategories = [];
   public drinkByCategory;
   public drinksList = [];
+  public totalAmountOfDrinks = 0;
   
 
   constructor(
@@ -48,11 +49,18 @@ export class ContentComponent implements OnInit {
   setDrinksList(drinks) {
     this.drinksList.push(drinks);
     console.log(this.drinksList)
+    this.someMethod(this.drinksList);
+  }
+
+  someMethod(array) {
+    this.totalAmountOfDrinks = 0;
+
+    for (let i = 0; i < array.length; i++) {
+      this.totalAmountOfDrinks = this.totalAmountOfDrinks + array[i].value.length;
+    }
   }
 
   checkCheckBoxValue(event) {
-    this.drinksList = [];
-
     if (event.source.checked) {
       this.checkedCategories.push(event.source.value);
     }
@@ -64,6 +72,10 @@ export class ContentComponent implements OnInit {
         }
       }
     }
+  }
+
+  applyCategories() {
+    this.drinksList = [];
 
     for (let i = 0; i < this.checkedCategories.length; i++) {
       const category = this.checkedCategories[i];
@@ -71,5 +83,4 @@ export class ContentComponent implements OnInit {
       this.getDrinkByCategory(filtredCategory, category);
     }
   }
-
 }

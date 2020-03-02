@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {ContentComponent} from 'src/app/components/content/content.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button'
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatPaginatorModule,
+    MatButtonModule
   ],
   exports: [
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatPaginatorModule,
+    MatButtonModule
   ]
 })
 export class ContentModule { }

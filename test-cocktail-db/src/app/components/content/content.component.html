@@ -1,5 +1,5 @@
-<div class="container-fluid content-container-wrapper">
-    <div class="row">
+
+    <div class="row content-row-height">
         <div class="col-md-2 categories-list-wrapper">
             <div *ngFor="let category of drinksCategories?.drinks">
                 <mat-checkbox 
@@ -7,9 +7,10 @@
                             (change)="checkCheckBoxValue($event)">{{category.strCategory}}
                 </mat-checkbox>
             </div>
+            <button class="apply-button" (click)="applyCategories()" mat-button> APPLY </button>
         </div>
         
-        <div class="col-md-10 drinks-list">
+        <div class="col-md-10 drinks-list-wrapper">
             <div *ngFor="let drinks of drinksList;">
                 <div class="drink-category">
                     {{drinks.name}}
@@ -29,6 +30,6 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-</div>

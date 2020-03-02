@@ -1,4 +1,8 @@
 
+.content-row-height {
+    height: 95vh;
+}
+
 .drink-category {
     font-family: Roboto;
     font-style: normal;
@@ -8,9 +12,18 @@
     color:grey;
 }
 
+.apply-button {
+    background-color: grey;
+}
+
 .categories-list-wrapper {
     border-right: 2px solid grey;
     padding-top: 20px;
+}
+
+.drinks-list-wrapper {
+    height: 100%;
+    overflow-y: auto;
 }
 
 .horizontal-line {
@@ -39,6 +52,11 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 
