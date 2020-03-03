@@ -1,35 +1,35 @@
-
-    <div class="row content-row-height">
-        <div class="col-md-2 categories-list-wrapper">
-            <div *ngFor="let category of drinksCategories?.drinks">
-                <mat-checkbox 
-                            name={{category.strCategory}} value={{category.strCategory}}
-                            (change)="checkCheckBoxValue($event)">{{category.strCategory}}
+<div class="row content-row-height">
+    <div class="col-md-3 categories-list-wrapper">
+        <div *ngFor="let category of drinksCategories?.drinks">
+            <div class="category-item">
+                <mat-checkbox name={{category.strCategory}} value={{category.strCategory}}
+                    (change)="checkCheckBoxValue($event)">
+                    <div class="category-item-name">{{category.strCategory}}</div>
                 </mat-checkbox>
             </div>
-            <button class="apply-button" (click)="applyCategories()" mat-button> APPLY </button>
         </div>
-        
-        <div class="col-md-10 drinks-list-wrapper">
-            <div *ngFor="let drinks of drinksList;">
-                <div class="drink-category">
-                    {{drinks.name}}
-                </div>
+        <button class="apply-button" (click)="applyCategories()" mat-button> APPLY </button>
+    </div>
 
-                <div class="horizontal-line"></div>
+    <div class="col-md-9 drinks-list-wrapper">
+        <div *ngFor="let drinks of drinksList;">
+            <div class="drink-category">
+                {{drinks.name}}
+            </div>
 
-                <div class="row">
-                    <div *ngFor="let drink of drinks.value; let i = index" class="col-md-2">
-                        <div class="drink-item">
-                            <div class="drink-item-image" style="background-image: url({{drink.strDrinkThumb}});"></div>
+            <div class="horizontal-line"></div>
 
-                            <div class="drink-item-name">
-                                {{drink.strDrink}}
-                            </div>
+            <div class="row">
+                <div *ngFor="let drink of drinks.value; let i = index" class="col-md-2">
+                    <div class="drink-item">
+                        <div class="drink-item-image" style="background-image: url({{drink.strDrinkThumb}});"></div>
+
+                        <div class="drink-item-name">
+                            {{drink.strDrink}}
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
+</div>

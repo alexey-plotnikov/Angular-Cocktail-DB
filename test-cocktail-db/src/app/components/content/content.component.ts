@@ -14,7 +14,6 @@ export class ContentComponent implements OnInit {
   public drinkByCategory;
   public drinksList = [];
   public totalAmountOfDrinks = 0;
-  
 
   constructor(
     private cocktailsService: CocktailsService
@@ -24,6 +23,7 @@ export class ContentComponent implements OnInit {
     this.getDrinksCategories();
   }
 
+  // get categories list from service
   getDrinksCategories() {
     this.cocktailsService.getDrinksCategories().subscribe(
       res => {
@@ -32,6 +32,7 @@ export class ContentComponent implements OnInit {
     );
   }
 
+  // get one category of drink from service
   getDrinkByCategory(filtredCategory, category) {
     this.cocktailsService.getDrinksByCategories(filtredCategory).subscribe(
       res => {
@@ -40,24 +41,15 @@ export class ContentComponent implements OnInit {
         const data = {
           name: category,
           value: this.drinkByCategory.drinks
-        }
+        };
         this.setDrinksList(data);
       }
     );
   }
 
+  // set list of drinks
   setDrinksList(drinks) {
     this.drinksList.push(drinks);
-    console.log(this.drinksList)
-    this.someMethod(this.drinksList);
-  }
-
-  someMethod(array) {
-    this.totalAmountOfDrinks = 0;
-
-    for (let i = 0; i < array.length; i++) {
-      this.totalAmountOfDrinks = this.totalAmountOfDrinks + array[i].value.length;
-    }
   }
 
   checkCheckBoxValue(event) {
@@ -74,11 +66,12 @@ export class ContentComponent implements OnInit {
     }
   }
 
+  // apply checked categories on button click
   applyCategories() {
     this.drinksList = [];
 
-    for (let i = 0; i < this.checkedCategories.length; i++) {
-      const category = this.checkedCategories[i];
+    for (const checkedCategory of this.checkedCategories) {
+      const category = checkedCategory;
       const filtredCategory = category.replace(/ /g, '_');
       this.getDrinkByCategory(filtredCategory, category);
     }

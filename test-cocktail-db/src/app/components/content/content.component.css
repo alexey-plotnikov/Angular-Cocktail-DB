@@ -1,0 +1,74 @@
+.content-row-height {
+  height: 90vh;
+}
+
+.category-item {
+  padding-bottom: 10px;
+}
+
+.category-item-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 20px;
+  line-height: 19px;
+  color: grey;
+}
+
+.apply-button {
+  width: 150px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 15px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.categories-list-wrapper {
+  padding-top: 20px;
+}
+
+.drinks-list-wrapper {
+  height: 100%;
+  padding-top: 20px;
+  overflow: auto;
+  border-left: 1px solid #d0d0d0;
+}
+
+.drink-category {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: 28px;
+  color: grey;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 15px;
+}
+
+.drink-item {
+  padding-bottom: 20px;
+}
+
+.drink-item-image {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.drink-item-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  padding-top: 10px;
+}
